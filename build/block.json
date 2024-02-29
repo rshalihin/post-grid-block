@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "sphr-it/post-grid",
+  "version": "0.1.0",
+  "title": "post grid",
+  "category": "text",
+  "icon": "cart",
+  "description": "A block to customize and show your online store posts. Sapphire-IT make is easy to show the posts you want to show.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "textdomain": "post-grid",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "columns": {
+      "type": "number",
+      "default": 2
+    },
+    "limit": {
+      "type": "number",
+      "default": 20
+    },
+    "order": {
+      "type": "string",
+      "default": "descending"
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "title"
+    },
+    "postsPerPage": {
+      "type": "number",
+      "default": "12"
+    },
+    "categorys": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "displayFeaturedImage": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

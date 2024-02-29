@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-sphr-recent-post {
+	border: 1px dotted rgb(1, 1, 1);
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	width: 850px !important;
+	max-width: 100% !important;
+}
+
