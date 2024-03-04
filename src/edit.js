@@ -8,7 +8,6 @@ import { PanelBody, RangeControl, QueryControls } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { columns, displayFeaturedImage, postsPerPage, order, orderBy, categories } = attributes;
-
 	const cateIds = categories && categories.length > 0 ? categories.map(cat => cat.id) : [];
 	const posts = useSelect((select) => {
 		return select('core').getEntityRecords('postType', 'post', { per_page: postsPerPage, _embed: true, order, orderby: orderBy, categories: cateIds });
@@ -80,12 +79,12 @@ export default function Edit({ attributes, setAttributes }) {
 			<div {...useBlockProps()}>
 				<div className="swiper wpcp-post-slider">
 					<div className={`swiper-wrapper flex-display has-${columns}-columns`}>
-						{posts && posts.map((post) => {
+						{posts ? posts.map((post) => {
 							const featuerImage = post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'].length > 0 && post._embedded['wp:featuredmedia'][0];
 							return (
 								<div className="swiper-slide" key={post.id}>
 									<div className="post wpcp-post">
-										<a href={post.link}>
+										<a href="#">
 											{displayFeaturedImage && featuerImage && <img src={featuerImage.source_url} alt={featuerImage.alt_text} />}
 										</a>
 										<div className="post-info">
@@ -104,10 +103,11 @@ export default function Edit({ attributes, setAttributes }) {
 									</div>
 								</div>
 							);
-						})}
+
+						}) : <p className='sr-p-20'>Please Select Orderby option of Post Grid Block  again to show perfectly.</p>}
 					</div>
 				</div>
-			</div>
+			</div >
 		</>
 	);
 }

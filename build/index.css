@@ -1,18 +1,1 @@
-/*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-sphr-recent-post {
-  border: 1px dotted rgb(1, 1, 1);
-}
-
-.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-  width: 850px !important;
-  max-width: 100% !important;
-}
-
-/*# sourceMappingURL=index.css.map*/
+.wp-block-create-block-sphr-recent-post{border:1px dotted #010101}.editor-styles-wrapper .block-editor-block-list__layout.is-root-container>:where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:100%!important;width:850px!important}.sr-p-20{padding:20px;text-align:center}
